@@ -1,4 +1,4 @@
-# Cucumber-Selenium-Reading data from Excel-POC
+# Cucumber-Selenium-Reading data from Excel
 
 In eclipse/STS install natural, Cucumber plugin which is available on Elipse Marketplace.
 
