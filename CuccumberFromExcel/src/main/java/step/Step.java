@@ -1,6 +1,8 @@
 package step;
 
 
+import java.io.File;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -15,12 +17,15 @@ public class Step {
 	WebDriver driver;
 	String sentence=null;
 	String word=null;
+	String chromedriver="chromedriver.exe";
 	
 	
 	
 	@Given("^user is already on WSD page$")
 	public void user_already_on_page(){
-		System.setProperty("webdriver.chrome.driver", "C:/Users/vishakh/Downloads/Compressed/chromedriver.exe");
+		ClassLoader classLoader = getClass().getClassLoader();
+		
+		System.setProperty("webdriver.chrome.driver", classLoader.getResource(chromedriver).getFile());
 		
  		driver=new ChromeDriver();
  		driver.get("http://vishakh.pythonanywhere.com/");
