@@ -1,13 +1,14 @@
-Feature: Free CRM Create Contacts
+Feature: Excel Read wsd test
 
-Scenario Outline: Free CRM Create a new contact scenario
+Scenario Outline: Excel Read wsd test
 
-Given user is already on Login Page
-Then user enters "<name>" and "<password>"
+Given user is already on WSD page
+Then user enters "<dataid>" 
+And enters submit button
 
 Examples:
-	|name|password|
-	|adasd|sdcfdf|
-	|test|wsd1|
-	|test2|wsd1|
-	|test3|wsd1|
+	|dataid|
+	|0|
+	|1|
+	|2|
+	|3|
